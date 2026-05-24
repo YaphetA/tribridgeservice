@@ -18,21 +18,22 @@ const playfair = Playfair_Display({
 export const metadata: Metadata = {
   title: "Tribridge — Smart Outsourcing. Real Results.",
   description:
-    "Tribridge is a global BPO and remote operations firm helping businesses scale with trained remote teams and streamlined outsourced operations. 48-hour deployment, flexible pricing, vetted talent.",
+    "Tribridge is a BPO and remote operations firm based in Addis Ababa, Ethiopia, helping businesses globally scale with trained dedicated teams. Proposal delivered within 48 hours. Flexible pricing, no lock-in.",
   keywords: [
     "BPO",
     "business process outsourcing",
     "remote teams",
+    "virtual admin",
+    "legal admin",
     "customer support",
-    "IT helpdesk",
     "back office",
-    "sales outsourcing",
+    "Ethiopia in-country support",
     "Tribridge",
   ],
   openGraph: {
     title: "Tribridge — Smart Outsourcing. Real Results.",
     description:
-      "Scale your business with trained remote teams and streamlined outsourced operations.",
+      "Scale your business with dedicated trained remote teams — based in Ethiopia, serving clients globally.",
     type: "website",
     locale: "en_US",
   },

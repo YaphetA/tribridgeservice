@@ -2,10 +2,10 @@
 
 import { motion, type Variants } from "framer-motion";
 import {
+  UserCog,
   Headphones,
-  Monitor,
-  FileText,
-  TrendingUp,
+  Scale,
+  Database,
   DollarSign,
   Users,
   ArrowUpRight,
@@ -13,46 +13,46 @@ import {
 
 const services = [
   {
+    icon: UserCog,
+    title: "Operations & Administration",
+    description:
+      "Virtual admin support, personal assistant services, executive and founder support, research and reporting, and HR admin — your operations backbone.",
+    tags: ["Virtual Admin", "PA Services", "Exec Support", "HR Admin"],
+  },
+  {
     icon: Headphones,
-    title: "Customer Support",
+    title: "Customer Contact",
     description:
-      "Multichannel assistance across calls, live chat, email, and social media — 24/7 coverage with human-first interactions.",
-    tags: ["24/7 Coverage", "Omnichannel", "CSAT Focused"],
+      "Inbound support, outbound outreach, appointment setting, inquiry management, and email and live chat — every customer touchpoint covered.",
+    tags: ["Inbound Support", "Outbound", "Appointment Setting", "Live Chat"],
   },
   {
-    icon: Monitor,
-    title: "IT Helpdesk",
+    icon: Scale,
+    title: "Legal & Compliance Support",
     description:
-      "Tier 1–2 technical support, device troubleshooting, and escalation management by certified IT professionals.",
-    tags: ["Tier 1–2", "Device Support", "SLA Guaranteed"],
+      "Legal document formatting, contract summaries, legal PA, paralegal admin, and DIFC/ADGM compliance administration for legal teams and firms.",
+    tags: ["Legal Documents", "Contract Summaries", "Paralegal Admin", "Compliance"],
   },
   {
-    icon: FileText,
-    title: "Back Office & Admin",
+    icon: Database,
+    title: "Back-Office & Data",
     description:
-      "Data processing, CRM management, document handling, and administrative workflows — accurate and efficient.",
-    tags: ["CRM Mgmt", "Data Entry", "Document Ops"],
-  },
-  {
-    icon: TrendingUp,
-    title: "Sales & Lead Generation",
-    description:
-      "Outbound outreach, appointment scheduling, and pipeline management to accelerate your revenue growth.",
-    tags: ["Outbound", "Pipeline Mgmt", "Appointment Setting"],
+      "Data entry and processing, CRM management and cleanup, back-office operations, social media management, and email marketing operations.",
+    tags: ["Data Entry", "CRM Mgmt", "Social Media", "Email Marketing"],
   },
   {
     icon: DollarSign,
     title: "Finance & Billing",
     description:
-      "Invoice processing, accounts receivable, reconciliation, and financial data management by trained specialists.",
-    tags: ["AR/AP", "Invoice Ops", "Reconciliation"],
+      "Invoice processing, payment follow-ups, accounts receivable support, and billing dispute resolution by trained finance specialists.",
+    tags: ["Invoice Processing", "AR Support", "Payment Follow-ups", "Billing"],
   },
   {
     icon: Users,
     title: "Dedicated Remote Teams",
     description:
-      "Custom full-time or part-time staffing tailored to your business — fully managed, vetted, and performance-tracked.",
-    tags: ["Full-Time", "Fully Managed", "Custom Teams"],
+      "Full-time or part-time staff built around your workflows — custom SOPs, a dedicated team lead, weekly reporting, and multi-timezone coverage.",
+    tags: ["Full-Time Staff", "Custom SOPs", "Team Lead", "Weekly Reporting"],
   },
 ];
 
@@ -94,8 +94,9 @@ export default function Services() {
             <span className="text-gold-gradient">Needs to Scale</span>
           </h2>
           <p className="text-[#64748B] text-lg max-w-2xl mx-auto leading-relaxed">
-            From frontline customer interactions to back-office operations, our
-            expert teams integrate seamlessly with your workflow.
+            Four practice areas plus finance support and dedicated team
+            staffing — covering every operational function your business needs
+            to grow.
           </p>
         </motion.div>
 
@@ -107,7 +108,7 @@ export default function Services() {
           viewport={{ once: true, margin: "-60px" }}
           className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6"
         >
-          {services.map((service, i) => {
+          {services.map((service) => {
             const Icon = service.icon;
             return (
               <motion.div

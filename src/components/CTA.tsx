@@ -5,9 +5,9 @@ import { ArrowRight, CheckCircle } from "lucide-react";
 
 const points = [
   "No long-term contracts required",
-  "Deployed in 48 hours or less",
+  "Proposal delivered within 48 hours",
   "Dedicated account manager from day one",
-  "Free consultation & team assessment",
+  "30-day exit clause on every engagement",
 ];
 
 export default function CTA() {
@@ -51,9 +51,9 @@ export default function CTA() {
           </h2>
 
           <p className="text-white/55 text-lg lg:text-xl max-w-2xl mx-auto mb-10 leading-relaxed">
-            Join 500+ companies that trust Tribridge to power their operations.
-            Get a free team assessment and deployment plan — no commitment
-            needed.
+            Join businesses across nine sectors that trust Tribridge to run
+            their operations. Book a free 30-minute consultation — we&apos;ll
+            have a written proposal to you within 48 hours.
           </p>
 
           {/* Checklist */}
@@ -69,7 +69,7 @@ export default function CTA() {
           {/* Buttons */}
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <a
-              href="mailto:hello@tribridge.io?subject=I'd like to get started with Tribridge"
+              href="#contact"
               className="group inline-flex items-center justify-center gap-2.5 px-10 py-4.5 bg-[#C9A84C] hover:bg-[#E4C87A] text-[#0A1628] font-bold text-base rounded-xl transition-all duration-200 shadow-2xl shadow-[#C9A84C]/30 hover:shadow-[#C9A84C]/50 hover:-translate-y-0.5"
             >
               Book Free Consultation

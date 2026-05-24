@@ -4,10 +4,10 @@ import { motion, useInView } from "framer-motion";
 import { useEffect, useRef, useState } from "react";
 
 const stats = [
-  { value: 500, suffix: "+", label: "Global Clients", sublabel: "across 6 continents" },
-  { value: 10000, suffix: "+", label: "Agents Deployed", sublabel: "since 2018" },
-  { value: 99.2, suffix: "%", label: "Client Retention", sublabel: "12-month rolling average", decimal: true },
-  { value: 48, suffix: "hr", label: "Deployment Time", sublabel: "from contract to live" },
+  { value: 50, suffix: "+", label: "Businesses Served", sublabel: "across multiple sectors" },
+  { value: 6, suffix: "", label: "Core Service Lines", sublabel: "covering every function" },
+  { value: 40, suffix: "%", label: "Avg. Cost Savings", sublabel: "vs. in-house equivalent" },
+  { value: 10, suffix: " days", label: "To Full Onboarding", sublabel: "from signed proposal to go-live" },
 ];
 
 function AnimatedCounter({
@@ -80,10 +80,10 @@ export default function Stats() {
             className="text-3xl lg:text-4xl font-bold text-[#0A1628] mb-3"
             style={{ fontFamily: "var(--font-playfair)" }}
           >
-            Results That Speak for Themselves
+            Real Numbers. Real Impact.
           </h2>
           <p className="text-[#0A1628]/65 text-base">
-            Six years of delivering measurable outcomes for businesses worldwide.
+            Real numbers from real client engagements — no inflation, no estimates.
           </p>
         </motion.div>
 
@@ -108,7 +108,6 @@ export default function Stats() {
                 <AnimatedCounter
                   value={stat.value}
                   suffix={stat.suffix}
-                  decimal={stat.decimal}
                 />
               </div>
               <div className="text-[#0A1628] font-semibold text-base mb-1">

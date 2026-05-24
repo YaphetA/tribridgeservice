@@ -1,19 +1,13 @@
 "use client";
 
 import { motion, type Variants } from "framer-motion";
-import { ArrowRight, Play, Shield, Award, Globe } from "lucide-react";
-
-const trustBadges = [
-  { icon: Shield, label: "ISO 27001 Certified" },
-  { icon: Award, label: "Top BPO 2024" },
-  { icon: Globe, label: "12+ Countries Served" },
-];
+import { ArrowRight, Play } from "lucide-react";
 
 const stats = [
-  { value: "500+", label: "Global Clients" },
-  { value: "48hrs", label: "Deployment" },
-  { value: "99.2%", label: "Client Retention" },
-  { value: "10K+", label: "Agents Deployed" },
+  { value: "50+", label: "Businesses Served" },
+  { value: "6", label: "Core Service Lines" },
+  { value: "40%", label: "Avg. Cost Savings" },
+  { value: "10 days", label: "To Full Onboarding" },
 ];
 
 const fadeUp: Variants = {
@@ -30,13 +24,9 @@ export default function Hero() {
     <section className="relative min-h-screen flex flex-col overflow-hidden bg-[#0A1628]">
       {/* Background layers */}
       <div className="absolute inset-0">
-        {/* Gradient mesh */}
         <div className="absolute inset-0 bg-gradient-to-br from-[#0A1628] via-[#0D1F3C] to-[#0A1628]" />
-        {/* Radial glow top-right */}
         <div className="absolute -top-40 -right-40 w-[600px] h-[600px] rounded-full bg-[#C9A84C]/8 blur-[120px]" />
-        {/* Radial glow bottom-left */}
         <div className="absolute -bottom-40 -left-40 w-[500px] h-[500px] rounded-full bg-[#1E3A5F]/60 blur-[100px]" />
-        {/* Grid pattern */}
         <div
           className="absolute inset-0 opacity-[0.04]"
           style={{
@@ -49,7 +39,7 @@ export default function Hero() {
       {/* Content */}
       <div className="relative z-10 flex-1 flex flex-col justify-center max-w-7xl mx-auto px-6 lg:px-8 pt-32 pb-16">
         <div className="max-w-4xl">
-          {/* Badge */}
+          {/* Location badge */}
           <motion.div
             custom={0}
             variants={fadeUp}
@@ -57,9 +47,8 @@ export default function Hero() {
             animate="visible"
             className="inline-flex items-center gap-2.5 px-4 py-2 rounded-full border border-[#C9A84C]/30 bg-[#C9A84C]/8 mb-8"
           >
-            <span className="w-1.5 h-1.5 rounded-full bg-[#C9A84C] animate-pulse" />
             <span className="text-[#E4C87A] text-sm font-medium tracking-wide">
-              Trusted by 500+ Companies Worldwide
+              Addis Ababa, Ethiopia · Serving Clients Globally
             </span>
           </motion.div>
 
@@ -86,10 +75,14 @@ export default function Hero() {
             animate="visible"
             className="text-white/60 text-xl lg:text-2xl leading-relaxed mb-10 max-w-2xl"
           >
-            Scale your business with expertly trained remote teams and
-            streamlined outsourced operations — deployed in{" "}
-            <span className="text-white/90 font-medium">48 hours</span>, not
-            months.
+            Scale your business with expertly trained, dedicated remote teams
+            and streamlined outsourced operations —{" "}
+            <span className="text-white/90 font-medium">
+              proposal within 48 hours
+            </span>
+            , full onboarding in{" "}
+            <span className="text-white/90 font-medium">10 business days</span>
+            .
           </motion.p>
 
           {/* CTA Buttons */}
@@ -98,13 +91,13 @@ export default function Hero() {
             variants={fadeUp}
             initial="hidden"
             animate="visible"
-            className="flex flex-col sm:flex-row gap-4 mb-16"
+            className="flex flex-col sm:flex-row gap-4"
           >
             <a
               href="#contact"
               className="group inline-flex items-center justify-center gap-2.5 px-8 py-4 bg-[#C9A84C] hover:bg-[#E4C87A] text-[#0A1628] font-semibold text-base rounded-xl transition-all duration-200 shadow-2xl shadow-[#C9A84C]/25 hover:shadow-[#C9A84C]/40 hover:-translate-y-0.5"
             >
-              Start for Free
+              Book a Free Consultation
               <ArrowRight
                 size={18}
                 className="group-hover:translate-x-1 transition-transform"
@@ -117,25 +110,6 @@ export default function Hero() {
               <Play size={16} className="fill-white" />
               Explore Services
             </a>
-          </motion.div>
-
-          {/* Trust Badges */}
-          <motion.div
-            custom={4}
-            variants={fadeUp}
-            initial="hidden"
-            animate="visible"
-            className="flex flex-wrap gap-6"
-          >
-            {trustBadges.map(({ icon: Icon, label }) => (
-              <div
-                key={label}
-                className="flex items-center gap-2 text-white/50"
-              >
-                <Icon size={15} className="text-[#C9A84C]" />
-                <span className="text-sm font-medium">{label}</span>
-              </div>
-            ))}
           </motion.div>
         </div>
       </div>

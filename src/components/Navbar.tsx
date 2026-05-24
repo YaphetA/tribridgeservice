@@ -6,9 +6,9 @@ import { Menu, X, ChevronDown } from "lucide-react";
 
 const navLinks = [
   { label: "Services", href: "#services" },
-  { label: "Industries", href: "#industries" },
+  { label: "Ethiopia", href: "#ethiopia" },
+  { label: "Who We Serve", href: "#industries" },
   { label: "Why Tribridge", href: "#why-us" },
-  { label: "About", href: "#about" },
 ];
 
 export default function Navbar() {

@@ -1,7 +1,6 @@
 "use client";
 
-import { motion } from "framer-motion";
-import { Mail, Phone, MapPin, ArrowUpRight } from "lucide-react";
+import { MapPin, ArrowUpRight } from "lucide-react";
 
 // Inline SVG social icons (lucide-react doesn't include LinkedIn/X in this version)
 function LinkedInIcon({ size = 15 }: { size?: number }) {
@@ -23,27 +22,27 @@ function XIcon({ size = 15 }: { size?: number }) {
 }
 
 const services = [
-  "Customer Support",
-  "IT Helpdesk",
-  "Back Office & Admin",
-  "Sales & Lead Generation",
+  "Operations & Administration",
+  "Customer Contact",
+  "Legal & Compliance Support",
+  "Back-Office & Data",
   "Finance & Billing",
   "Dedicated Remote Teams",
 ];
 
-const industries = [
-  "E-Commerce & Retail",
-  "SaaS & Technology",
-  "Healthcare",
-  "Real Estate",
-  "Logistics",
-  "Hospitality",
+const whoWeServe = [
+  "Law Firms & Legal Teams",
+  "NGOs & Development Organisations",
+  "Real Estate & Property Mgmt",
+  "E-Commerce & SaaS",
+  "Accounting & Professional Services",
+  "Healthcare & Wellness",
 ];
 
 const company = [
   { label: "About Us", href: "#about" },
   { label: "Services", href: "#services" },
-  { label: "Industries", href: "#industries" },
+  { label: "Ethiopia Support", href: "#ethiopia" },
   { label: "Why Tribridge", href: "#why-us" },
   { label: "Contact", href: "#contact" },
 ];
@@ -66,29 +65,16 @@ export default function Footer() {
               </span>
             </a>
             <p className="text-white/45 text-sm leading-relaxed mb-6">
-              Smart Outsourcing. Real Results. Helping businesses worldwide scale
-              with expert remote teams since 2018.
+              BPO and remote operations firm based in Addis Ababa, Ethiopia —
+              delivering trained dedicated teams and specialist in-country
+              support to clients globally.
             </p>
 
-            {/* Contact */}
+            {/* Location */}
             <div className="space-y-3">
-              <a
-                href="mailto:hello@tribridge.io"
-                className="flex items-center gap-2.5 text-white/45 hover:text-white/80 text-sm transition-colors"
-              >
-                <Mail size={14} className="text-[#C9A84C]" />
-                hello@tribridge.io
-              </a>
-              <a
-                href="tel:+18005551234"
-                className="flex items-center gap-2.5 text-white/45 hover:text-white/80 text-sm transition-colors"
-              >
-                <Phone size={14} className="text-[#C9A84C]" />
-                +1 (800) 555-1234
-              </a>
               <div className="flex items-center gap-2.5 text-white/45 text-sm">
                 <MapPin size={14} className="text-[#C9A84C] flex-shrink-0" />
-                New York, NY · Manila · London
+                Addis Ababa, Ethiopia · Serving Clients Globally
               </div>
             </div>
 
@@ -130,19 +116,19 @@ export default function Footer() {
             </ul>
           </div>
 
-          {/* Industries column */}
+          {/* Who We Serve column */}
           <div>
             <h4 className="text-white font-semibold text-sm mb-5 tracking-wide uppercase">
-              Industries
+              Who We Serve
             </h4>
             <ul className="space-y-3">
-              {industries.map((industry) => (
-                <li key={industry}>
+              {whoWeServe.map((item) => (
+                <li key={item}>
                   <a
                     href="#industries"
                     className="text-white/45 hover:text-white/80 text-sm transition-colors hover-underline"
                   >
-                    {industry}
+                    {item}
                   </a>
                 </li>
               ))}
@@ -170,7 +156,8 @@ export default function Footer() {
             {/* CTA card */}
             <div className="p-5 rounded-xl border border-[#C9A84C]/20 bg-[#C9A84C]/5">
               <p className="text-white/70 text-xs leading-relaxed mb-3">
-                Ready to start? Get a free consultation and deployment plan.
+                Ready to start? Book a free 30-minute consultation and receive a
+                tailored proposal within 48 hours.
               </p>
               <a
                 href="#contact"

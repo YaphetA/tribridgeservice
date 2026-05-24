@@ -1,52 +1,52 @@
 "use client";
 
-import { motion } from "framer-motion";
-import { Quote } from "lucide-react";
+import { motion, type Variants } from "framer-motion";
+import { Phone, FileText, GraduationCap, BarChart2 } from "lucide-react";
 
-const testimonials = [
+const steps = [
   {
-    quote:
-      "Tribridge transformed our customer support overnight. We went from a 14-hour response time to under 2 hours — and our CSAT scores jumped from 67% to 91% in the first quarter.",
-    name: "Sarah Chen",
-    title: "VP of Customer Experience",
-    company: "NovaTech SaaS",
-    initials: "SC",
-    color: "from-blue-600 to-blue-800",
+    number: "01",
+    icon: Phone,
+    title: "Discovery",
+    description:
+      "A 30-minute call to understand your operations, volume, preferred tools, and the agent profile that fits your business best. No forms, no decks — just a focused conversation.",
   },
   {
-    quote:
-      "We needed to scale our e-commerce support team for the holiday season in less than a week. Tribridge delivered 40 trained agents in 48 hours. Absolutely remarkable execution.",
-    name: "Marcus Thompson",
-    title: "Director of Operations",
-    company: "Elevate Commerce",
-    initials: "MT",
-    color: "from-emerald-600 to-emerald-800",
+    number: "02",
+    icon: FileText,
+    title: "Proposal & Matching",
+    description:
+      "A written proposal delivered within 48 hours. Agents are matched to your specific requirements — skills, timezone, and workflow compatibility confirmed before you commit.",
   },
   {
-    quote:
-      "The flexibility of their pricing model and the quality of their agents is unmatched. We've tried three other BPO providers — Tribridge is in a different league entirely.",
-    name: "Priya Kapoor",
-    title: "Chief Operating Officer",
-    company: "MedSchedule Pro",
-    initials: "PK",
-    color: "from-purple-600 to-purple-800",
+    number: "03",
+    icon: GraduationCap,
+    title: "Onboarding",
+    description:
+      "Five days of client-specific training before any agent goes live. Your tools, your SOPs, your quality standards — built into the team before day one.",
+  },
+  {
+    number: "04",
+    icon: BarChart2,
+    title: "Live & Ongoing",
+    description:
+      "Weekly reporting on hours, tasks, and priorities. Monthly account review calls. QA scoring on every account. Flexible scaling as your needs evolve.",
   },
 ];
 
-const starRating = (
-  <div className="flex gap-1 mb-5">
-    {[...Array(5)].map((_, i) => (
-      <svg
-        key={i}
-        className="w-4 h-4 fill-[#C9A84C]"
-        viewBox="0 0 20 20"
-        xmlns="http://www.w3.org/2000/svg"
-      >
-        <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
-      </svg>
-    ))}
-  </div>
-);
+const containerVariants: Variants = {
+  hidden: {},
+  visible: { transition: { staggerChildren: 0.1 } },
+};
+
+const cardVariants: Variants = {
+  hidden: { opacity: 0, y: 30 },
+  visible: {
+    opacity: 1,
+    y: 0,
+    transition: { duration: 0.6, ease: "easeOut" },
+  },
+};
 
 export default function Testimonials() {
   return (
@@ -61,72 +61,79 @@ export default function Testimonials() {
           className="text-center mb-16"
         >
           <span className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-[#F1F5F9] text-[#C9A84C] text-sm font-semibold mb-5 border border-[#C9A84C]/20">
-            Client Testimonials
+            How We Work
           </span>
           <h2
             className="text-4xl lg:text-5xl font-bold text-[#0A1628] leading-tight mb-5"
             style={{ fontFamily: "var(--font-playfair)" }}
           >
-            Trusted by Industry
-            <span className="text-gold-gradient"> Leaders</span>
+            From First Call to
+            <span className="text-gold-gradient"> Live Operations</span>
           </h2>
           <p className="text-[#64748B] text-lg max-w-2xl mx-auto">
-            Don&apos;t take our word for it — hear directly from the companies
-            we&apos;ve helped transform.
+            A structured four-step process designed to get your remote team
+            trained, matched, and fully operational — without long wait times
+            or vague timelines.
           </p>
         </motion.div>
 
-        {/* Cards */}
-        <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
-          {testimonials.map((t, i) => (
-            <motion.div
-              key={t.name}
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true, margin: "-60px" }}
-              transition={{
-                delay: i * 0.1,
-                duration: 0.6,
-                ease: "easeOut",
-              }}
-              className="relative flex flex-col p-8 rounded-2xl border border-[#E2E8F0] bg-white hover:shadow-xl hover:shadow-slate-200/60 transition-all duration-300 hover:-translate-y-1"
-            >
-              {/* Quote icon */}
-              <div className="w-10 h-10 rounded-xl bg-[#C9A84C]/10 flex items-center justify-center mb-5">
-                <Quote size={18} className="text-[#C9A84C]" />
-              </div>
+        {/* Step Cards */}
+        <motion.div
+          variants={containerVariants}
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true, margin: "-60px" }}
+          className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6"
+        >
+          {steps.map((step) => {
+            const Icon = step.icon;
+            return (
+              <motion.div
+                key={step.title}
+                variants={cardVariants}
+                className="relative p-7 rounded-2xl border border-[#E2E8F0] bg-white hover:shadow-xl hover:shadow-slate-200/60 transition-all duration-300 hover:-translate-y-1 overflow-hidden"
+              >
+                {/* Decorative step number */}
+                <span
+                  className="absolute top-4 right-5 text-5xl font-bold text-[#C9A84C]/12 select-none pointer-events-none"
+                  style={{ fontFamily: "var(--font-playfair)" }}
+                >
+                  {step.number}
+                </span>
 
-              {/* Stars */}
-              {starRating}
-
-              {/* Quote text */}
-              <p className="text-[#334155] text-sm leading-relaxed flex-1 mb-8 italic">
-                &ldquo;{t.quote}&rdquo;
-              </p>
-
-              {/* Divider */}
-              <div className="border-t border-[#F1F5F9] pt-6">
-                <div className="flex items-center gap-3">
-                  {/* Avatar */}
-                  <div
-                    className={`w-10 h-10 rounded-full bg-gradient-to-br ${t.color} flex items-center justify-center text-white text-sm font-bold flex-shrink-0`}
-                  >
-                    {t.initials}
-                  </div>
-                  <div>
-                    <div className="text-[#0A1628] font-semibold text-sm">
-                      {t.name}
-                    </div>
-                    <div className="text-[#64748B] text-xs">{t.title}</div>
-                    <div className="text-[#C9A84C] text-xs font-medium">
-                      {t.company}
-                    </div>
-                  </div>
+                {/* Icon */}
+                <div className="w-11 h-11 rounded-xl bg-[#C9A84C]/10 flex items-center justify-center mb-5">
+                  <Icon size={20} className="text-[#C9A84C]" />
                 </div>
-              </div>
-            </motion.div>
-          ))}
-        </div>
+
+                <h3
+                  className="text-lg font-bold text-[#0A1628] mb-2.5"
+                  style={{ fontFamily: "var(--font-playfair)" }}
+                >
+                  {step.title}
+                </h3>
+                <p className="text-[#64748B] text-sm leading-relaxed">
+                  {step.description}
+                </p>
+              </motion.div>
+            );
+          })}
+        </motion.div>
+
+        {/* Bottom note */}
+        <motion.p
+          initial={{ opacity: 0 }}
+          whileInView={{ opacity: 1 }}
+          viewport={{ once: true }}
+          transition={{ delay: 0.4, duration: 0.7 }}
+          className="text-center text-[#94A3B8] text-sm mt-10"
+        >
+          Most clients are fully onboarded and live within{" "}
+          <span className="text-[#C9A84C] font-semibold">
+            10 business days
+          </span>{" "}
+          of signing.
+        </motion.p>
       </div>
     </section>
   );
