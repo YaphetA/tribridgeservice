@@ -3,13 +3,6 @@
 import { motion, type Variants } from "framer-motion";
 import { ArrowRight, Play } from "lucide-react";
 
-const stats = [
-  { value: "50+", label: "Businesses Served" },
-  { value: "6", label: "Core Service Lines" },
-  { value: "40%", label: "Avg. Cost Savings" },
-  { value: "10 days", label: "To Full Onboarding" },
-];
-
 const fadeUp: Variants = {
   hidden: { opacity: 0, y: 30 },
   visible: (i: number) => ({
@@ -21,7 +14,7 @@ const fadeUp: Variants = {
 
 export default function Hero() {
   return (
-    <section className="relative min-h-screen flex flex-col overflow-hidden bg-[#0A1628]">
+    <section className="relative min-h-screen flex flex-col justify-center overflow-hidden bg-[#0A1628]">
       {/* Background layers */}
       <div className="absolute inset-0">
         <div className="absolute inset-0 bg-gradient-to-br from-[#0A1628] via-[#0D1F3C] to-[#0A1628]" />
@@ -37,9 +30,9 @@ export default function Hero() {
       </div>
 
       {/* Content */}
-      <div className="relative z-10 flex-1 flex flex-col justify-center max-w-7xl mx-auto px-6 lg:px-8 pt-32 pb-16">
+      <div className="relative z-10 flex-1 flex flex-col justify-center max-w-7xl mx-auto px-6 lg:px-8 pt-32 pb-24">
         <div className="max-w-4xl">
-          {/* Location badge */}
+          {/* Badge */}
           <motion.div
             custom={0}
             variants={fadeUp}
@@ -48,7 +41,7 @@ export default function Hero() {
             className="inline-flex items-center gap-2.5 px-4 py-2 rounded-full border border-[#C9A84C]/30 bg-[#C9A84C]/8 mb-8"
           >
             <span className="text-[#E4C87A] text-sm font-medium tracking-wide">
-              Addis Ababa, Ethiopia · Serving Clients Globally
+              Serving Clients Globally
             </span>
           </motion.div>
 
@@ -113,32 +106,6 @@ export default function Hero() {
           </motion.div>
         </div>
       </div>
-
-      {/* Stats Bar */}
-      <motion.div
-        initial={{ opacity: 0, y: 40 }}
-        animate={{ opacity: 1, y: 0 }}
-        transition={{ delay: 0.7, duration: 0.8, ease: "easeOut" }}
-        className="relative z-10 border-t border-white/8"
-      >
-        <div className="max-w-7xl mx-auto px-6 lg:px-8">
-          <div className="grid grid-cols-2 lg:grid-cols-4 divide-x divide-white/8">
-            {stats.map((stat, i) => (
-              <div key={i} className="flex flex-col items-center py-8 px-4">
-                <span
-                  className="text-3xl lg:text-4xl font-bold text-white mb-1"
-                  style={{ fontFamily: "var(--font-playfair)" }}
-                >
-                  {stat.value}
-                </span>
-                <span className="text-white/45 text-sm font-medium">
-                  {stat.label}
-                </span>
-              </div>
-            ))}
-          </div>
-        </div>
-      </motion.div>
     </section>
   );
 }

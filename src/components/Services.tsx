@@ -94,9 +94,10 @@ export default function Services() {
             <span className="text-gold-gradient">Needs to Scale</span>
           </h2>
           <p className="text-[#64748B] text-lg max-w-2xl mx-auto leading-relaxed">
-            Four practice areas plus finance support and dedicated team
-            staffing — covering every operational function your business needs
-            to grow.
+            Operations and admin, customer contact, legal document services,
+            back-office management, billing admin, and dedicated remote team
+            staffing — covering every function your business needs to run and
+            grow.
           </p>
         </motion.div>
 

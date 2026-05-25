@@ -187,18 +187,6 @@ export default function EthiopiaSection() {
           })}
         </motion.div>
 
-        {/* Bottom disclaimer */}
-        <motion.p
-          initial={{ opacity: 0 }}
-          whileInView={{ opacity: 1 }}
-          viewport={{ once: true }}
-          transition={{ delay: 0.5, duration: 0.7 }}
-          className="text-white/30 text-sm text-center mt-12 max-w-2xl mx-auto"
-        >
-          This division operates independently from Tribridge&apos;s standard
-          BPO service lines. Enquiries for Ethiopia in-country support are
-          handled by a dedicated specialist team.
-        </motion.p>
       </div>
     </section>
   );
