@@ -63,7 +63,7 @@ export async function POST(request: NextRequest) {
 <body>
   <div class="card">
     <div class="badge">New Consultation Request</div>
-    <h1>Tribridge Partners</h1>
+    <h1>Tribridge Services</h1>
     <p class="sub">A new consultation request has been submitted.</p>
     <table>
       <tr><td>Name</td><td>${name}</td></tr>
@@ -75,14 +75,14 @@ export async function POST(request: NextRequest) {
       <tr><td>Service Interest</td><td>${service}</td></tr>
       <tr><td>Message</td><td>${message || "—"}</td></tr>
     </table>
-    <div class="footer">tribridgepartners.com · Reply to this email to respond directly to ${name}</div>
+    <div class="footer">tribridgeservices.com · Reply to this email to respond directly to ${name}</div>
   </div>
 </body>
 </html>
     `.trim();
 
     await transporter.sendMail({
-      from: `"Tribridge Partners" <${gmailUser}>`,
+      from: `"Tribridge Services" <${gmailUser}>`,
       to: contactEmail,
       replyTo: email,
       subject: `New Consultation Request — ${company} (${timeline})`,

@@ -173,7 +173,7 @@ export default function Footer() {
         {/* Bottom bar */}
         <div className="py-6 border-t border-white/8 flex flex-col sm:flex-row items-center justify-between gap-4">
           <p className="text-white/30 text-xs">
-            © {new Date().getFullYear()} Tribridge Partners. All rights
+            © {new Date().getFullYear()} Tribridge Services. All rights
             reserved.
           </p>
           <div className="flex gap-6">
