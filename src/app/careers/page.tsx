@@ -8,9 +8,6 @@ import {
   ArrowUpRight,
   Mail,
   CheckCircle,
-  Users,
-  TrendingUp,
-  Shield,
   Search,
   X,
 } from "lucide-react";
@@ -22,8 +19,8 @@ const jobs = [
     id: 1,
     title: "Customer Service Agent",
     type: "Full-Time",
-    location: "Addis Ababa — On Site",
-    locationType: "On Site",
+    location: "Addis Ababa — Office",
+    locationType: "Office",
     category: "Customer Support",
     subject: "Customer Service Agent Application — [Your Name]",
     description:
@@ -40,8 +37,8 @@ const jobs = [
     id: 2,
     title: "Appointment Setting & Outreach Specialist",
     type: "Full-Time",
-    location: "Addis Ababa — On Site",
-    locationType: "On Site",
+    location: "Addis Ababa — Office",
+    locationType: "Office",
     category: "Sales",
     subject: "Outreach Specialist Application — [Your Name]",
     description:
@@ -58,8 +55,8 @@ const jobs = [
     id: 3,
     title: "Virtual Administrative Assistant",
     type: "Full-Time",
-    location: "Addis Ababa — On Site",
-    locationType: "On Site",
+    location: "Addis Ababa — Office",
+    locationType: "Office",
     category: "Administration",
     subject: "VA Application — [Your Name]",
     description:
@@ -76,8 +73,8 @@ const jobs = [
     id: 4,
     title: "Legal Support Assistant / Legal PA",
     type: "Full-Time",
-    location: "Addis Ababa — On Site",
-    locationType: "On Site",
+    location: "Addis Ababa — Office",
+    locationType: "Office",
     category: "Legal",
     subject: "Legal PA Application — [Your Name]",
     description:
@@ -93,30 +90,8 @@ const jobs = [
 ];
 
 const CATEGORIES = ["All", "Customer Support", "Sales", "Administration", "Legal"];
-const LOCATIONS = ["All", "On Site"];
+const LOCATIONS = ["All", "Office"];
 
-const perks = [
-  {
-    icon: <Users size={20} />,
-    title: "Dedicated Assignment",
-    body: "No rotation, no shared queues. You are assigned to one client and build a genuine working relationship.",
-  },
-  {
-    icon: <TrendingUp size={20} />,
-    title: "Clear Growth Path",
-    body: "Weekly performance feedback and a structured development path toward senior and team lead roles.",
-  },
-  {
-    icon: <Shield size={20} />,
-    title: "Above-Market Pay",
-    body: "Competitive salaries benchmarked above the Addis Ababa market rate, paid reliably every month.",
-  },
-  {
-    icon: <CheckCircle size={20} />,
-    title: "Professional Onboarding",
-    body: "Five-day client-specific training before you start — you are fully prepared before Day 1.",
-  },
-];
 
 const fadeUp: Variants = {
   hidden: { opacity: 0, y: 24 },
@@ -213,40 +188,6 @@ export default function CareersPage() {
             </motion.div>
           </div>
         </section>
-
-        {/* Perks */}
-        <section className="pb-20">
-          <div className="max-w-7xl mx-auto px-6 lg:px-8">
-            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5">
-              {perks.map((perk, i) => (
-                <motion.div
-                  key={perk.title}
-                  custom={i}
-                  initial="hidden"
-                  whileInView="show"
-                  viewport={{ once: true }}
-                  variants={fadeUp}
-                  className="p-6 rounded-2xl border border-white/8 bg-white/3 hover:border-[#C9A84C]/25 hover:bg-[#C9A84C]/4 transition-all duration-300"
-                >
-                  <div className="w-9 h-9 rounded-lg bg-[#C9A84C]/12 flex items-center justify-center text-[#C9A84C] mb-4">
-                    {perk.icon}
-                  </div>
-                  <h3 className="text-white font-semibold text-sm mb-2">
-                    {perk.title}
-                  </h3>
-                  <p className="text-white/45 text-sm leading-relaxed">
-                    {perk.body}
-                  </p>
-                </motion.div>
-              ))}
-            </div>
-          </div>
-        </section>
-
-        {/* Divider */}
-        <div className="max-w-7xl mx-auto px-6 lg:px-8">
-          <div className="border-t border-white/8" />
-        </div>
 
         {/* Open Positions */}
         <section className="py-20">
