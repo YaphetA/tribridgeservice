@@ -9,6 +9,7 @@ const navLinks = [
   { label: "Ethiopia", href: "#ethiopia" },
   { label: "Industries", href: "#industries" },
   { label: "Why Tribridge", href: "#why-us" },
+  { label: "Careers", href: "/careers" },
 ];
 
 export default function Navbar() {

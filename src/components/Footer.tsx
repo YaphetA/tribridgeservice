@@ -44,6 +44,7 @@ const company = [
   { label: "Services", href: "#services" },
   { label: "Ethiopia Support", href: "#ethiopia" },
   { label: "Why Tribridge", href: "#why-us" },
+  { label: "Careers", href: "/careers" },
   { label: "Contact", href: "#contact" },
 ];
 
