@@ -28,7 +28,6 @@ const jobs = [
     requirements: [
       "Excellent written and spoken English",
       "1+ year in a customer-facing role",
-      "Reliable high-speed internet and quiet workspace",
       "Strong computer literacy",
     ],
     tags: ["Customer Support", "EST / PST Overlap"],
