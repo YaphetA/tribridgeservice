@@ -22,8 +22,8 @@ const jobs = [
     id: 1,
     title: "Customer Service Agent",
     type: "Full-Time",
-    location: "Addis Ababa — Remote or Office",
-    locationType: "Remote or Office",
+    location: "Addis Ababa — On Site",
+    locationType: "On Site",
     category: "Customer Support",
     subject: "Customer Service Agent Application — [Your Name]",
     description:
@@ -34,14 +34,14 @@ const jobs = [
       "Reliable high-speed internet and quiet workspace",
       "Strong computer literacy",
     ],
-    tags: ["Customer Support", "EST / PST Overlap", "Immediate Start"],
+    tags: ["Customer Support", "EST / PST Overlap"],
   },
   {
     id: 2,
     title: "Appointment Setting & Outreach Specialist",
     type: "Full-Time",
-    location: "Addis Ababa — Remote or Office",
-    locationType: "Remote or Office",
+    location: "Addis Ababa — On Site",
+    locationType: "On Site",
     category: "Sales",
     subject: "Outreach Specialist Application — [Your Name]",
     description:
@@ -58,8 +58,8 @@ const jobs = [
     id: 3,
     title: "Virtual Administrative Assistant",
     type: "Full-Time",
-    location: "Addis Ababa — Remote",
-    locationType: "Remote",
+    location: "Addis Ababa — On Site",
+    locationType: "On Site",
     category: "Administration",
     subject: "VA Application — [Your Name]",
     description:
@@ -76,8 +76,8 @@ const jobs = [
     id: 4,
     title: "Legal Support Assistant / Legal PA",
     type: "Full-Time",
-    location: "Addis Ababa — Remote",
-    locationType: "Remote",
+    location: "Addis Ababa — On Site",
+    locationType: "On Site",
     category: "Legal",
     subject: "Legal PA Application — [Your Name]",
     description:
@@ -93,7 +93,7 @@ const jobs = [
 ];
 
 const CATEGORIES = ["All", "Customer Support", "Sales", "Administration", "Legal"];
-const LOCATIONS = ["All", "Remote", "Remote or Office"];
+const LOCATIONS = ["All", "On Site"];
 
 const perks = [
   {
