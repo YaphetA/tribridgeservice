@@ -54,7 +54,7 @@ const services = [
 ];
 
 const CALENDLY_URL =
-  process.env.NEXT_PUBLIC_CALENDLY_URL ?? "https://calendly.com/tribridgepartners";
+  process.env.NEXT_PUBLIC_CALENDLY_URL ?? "https://calendly.com/tribridgeservices";
 
 function CalendlyEmbed() {
   const containerRef = useRef<HTMLDivElement>(null);
